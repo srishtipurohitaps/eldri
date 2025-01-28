@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medication & Reminders</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Eldri Logo" id="logo" width="200px" height="200px">
+        <h1>Medication & Reminders</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="tracker.html">Health Tracker</a>
+            <a href="medication.html">Medication & Reminders</a>
+            <a href="resources.html">Resources</a>
+            <a href="chatbot.html">Chatbot Companion</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Set Your Medication Reminders</h2>
+            <p>Never miss a dose! Use the tool below to set reminders for your medication schedule:</p>
+            <label for="medicationName">Medication Name:</label>
+            <input type="text" id="medicationName" placeholder="Enter medication name">
+            <br>
+            <label for="reminderTime">Reminder Time:</label>
+            <input type="time" id="reminderTime">
+            <button onclick="setReminder()">Set Reminder</button>
+            <p id="reminderMessage"></p>
+
+            <h3>Your Medication Reminder Log</h3>
+            <ul id="medicationLog"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eldri - All rights reserved.</p>
+    </footer>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Eldri Logo" id="logo" width="200px" height="200px">
+        <h1>Health Tracker</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="tracker.html">Health Tracker</a>
+            <a href="medication.html">Medication & Reminders</a>
+            <a href="resources.html">Resources</a>
+            <a href="chatbot.html">Chatbot Companion</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Log Your Symptoms</h2>
+            <div>
+                <label for="fatigue">Fatigue Level</label>
+                <input type="range" id="fatigue" min="0" max="10" value="5" oninput="updateValue('fatigueValue', this.value)">
+                <span id="fatigueValue">5</span>
+            </div>
+            <div>
+                <label for="pain">Pain Level</label>
+                <input type="range" id="pain" min="0" max="10" value="5" oninput="updateValue('painValue', this.value)">
+                <span id="painValue">5</span>
+            </div>
+            <div>
+                <label for="mood">Mood Level</label>
+                <input type="range" id="mood" min="0" max="10" value="5" oninput="updateValue('moodValue', this.value)">
+                <span id="moodValue">5</span>
+            </div>
+            <button onclick="logSymptoms()">Log Symptoms</button>
+            <p id="logMessage" style="display:none;"></p>
+
+            <h3>Your Symptom Log</h3>
+            <ul id="symptomLog"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Eldri - All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
